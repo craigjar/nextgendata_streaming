@@ -19,7 +19,7 @@ resolvers ++= Seq(
   "ASF" at "http://repository.apache.org/snapshots/"
 )
 
-libraryDependencies ++= Seq( "org.apache.spark" %% "spark-core"      % sparkVersion,
-                             "org.apache.spark" %% "spark-sql"       % sparkVersion,
-                             "org.apache.spark" %% "spark-streaming" % sparkVersion,
+libraryDependencies ++= Seq( "org.apache.spark" %% "spark-core"      % sparkVersion changing() withSources(),
+                             "org.apache.spark" %% "spark-sql"       % sparkVersion changing() withSources(),
+                             "org.apache.spark" %% "spark-streaming" % sparkVersion changing() withSources(),
                              "org.scalatest"    %% "scalatest"       % "2.2.6" % Test)
